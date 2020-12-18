@@ -73,13 +73,15 @@ export default {
   ** See https://axios.nuxtjs.org/options
   */
   axios: {
-    proxy: true
+    proxy: true,
+    // 超时设置
+    timeout: 600000
   },
 
   proxy: {
     // Use a fake value for use at build-time
     '/v1/': {
-      target: process.env.API_URL || 'http://127.0.0.1:12345'
+      target: process.env.API_URL || 'http://127.0.0.1:8000'
     }
   },
   /*
